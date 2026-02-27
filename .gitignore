@@ -1,0 +1,43 @@
+# Keil MDK Build Output
+OBJ/
+*.o
+*.crf
+*.d
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.sct
+*.dep
+*.iex
+*._2i
+
+# Keil MDK Temp / Backup Files
+*.bak
+*.~*
+*~RF*.TMP
+*.TMP
+
+# Keil MDK IDE Files (user-specific)
+*.uvguix.*
+*.uvopt
+*.uvoptx
+JLinkLog.txt
+JLinkSettings.ini
+Nu_Link_Driver.ini
+EventRecorderStub.scvd
+
+# Debug Configs (auto-generated)
+DebugConfig/
+
+# RTE (auto-generated components)
+USER/RTE/
+
+# Startup listing (generated)
+*.lst
+
+# Windows
+Thumbs.db
+desktop.ini
