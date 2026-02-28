@@ -280,14 +280,18 @@ void Delay_us(uint16 Value)
   * @param ???¡Àus????
   * @retval int
   */
+#if defined(__GNUC__)
+__attribute__((optimize("O0"), noinline))
+#endif
 static void SPI_delay_us(uint16 Value)
 {
-	uint8 i=0;
-  while(Value--)
-	{ 
-		for(i=0;i<10;i++)
+	volatile uint16 outer = Value;
+	while(outer--)
+	{
+		volatile uint8 inner = 10;
+		while(inner--)
 		{
-			 __NOP;
+			__asm volatile ("nop");
 		}
 	}
 }

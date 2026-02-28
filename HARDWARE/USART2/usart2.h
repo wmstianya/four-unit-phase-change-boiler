@@ -103,7 +103,7 @@ typedef union _Mod_Inf
 }	Duble5_Info;  //双拼1吨;从机发送给主机的数据
 
 
-typedef struct _LCD_UNIS
+typedef struct __attribute__((packed)) _LCD_UNIS
 {
 	
 	
@@ -190,7 +190,7 @@ typedef union  _LCD10_MsESS
 
 
 
-typedef struct _CMD_UANIS
+typedef struct __attribute__((packed)) _CMD_UANIS
 {
 	
 	
@@ -280,7 +280,7 @@ typedef union  _LCD10_MAsESS
 
 
 
-typedef struct _LCDJZ_UNIS
+typedef struct __attribute__((packed)) _LCDJZ_UNIS
 {
 	//用于各从机的数据显示
 	
@@ -337,7 +337,7 @@ typedef union  _LCD10JZ_MsESS
 
 
 
-typedef struct _LCD4013JZ_UNIS
+typedef struct __attribute__((packed)) _LCD4013JZ_UNIS
 {
 	//用于机组分屏4013使用
 	uint16  Start_Close_Cmd; //机组启停或手动
@@ -418,13 +418,10 @@ typedef union  _LCD4013_MsESS
 
 
 
-typedef union  _LCD10_MsaESS
-{  //
+typedef struct  _LCD10_MsaESS
+{
 	uint16 HP_WaterValue[10];  
 	uint16 LP_WaterValue[10];  
-	
-	 
-	
 }LCD10K1_Struct;
 
 

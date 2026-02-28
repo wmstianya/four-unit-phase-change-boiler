@@ -153,7 +153,7 @@ volatile	uint8 UnSuccessTalk;
 }SLAVE_GG;//从机的控制命令台
 
 
-typedef struct _CCMD_UNIS
+typedef struct __attribute__((packed)) _CCMD_UNIS
 {
 	uint16  Flame; //同步参数设置标志
 	uint16  Error_Code;  //故障代码
