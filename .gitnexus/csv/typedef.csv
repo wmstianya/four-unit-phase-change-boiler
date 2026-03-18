@@ -1,0 +1,655 @@
+id,name,filePath,startLine,endLine,content
+"Typedef:USER/main.h:uint8","uint8","USER/main.h",3,3,"#define __MAIN_H
+
+typedef unsigned char  uint8;                   /* �޷���8λ���ͱ���                        */
+typedef signed   char  int8;                    /* �з���8λ���ͱ���                        */
+typedef unsigned short uint16;                  /* �޷���16λ���ͱ���                       */
+"
+"Typedef:USER/main.h:int8","int8","USER/main.h",4,4,"
+typedef unsigned char  uint8;                   /* �޷���8λ���ͱ���                        */
+typedef signed   char  int8;                    /* �з���8λ���ͱ���                        */
+typedef unsigned short uint16;                  /* �޷���16λ���ͱ���                       */
+typedef signed   short int16;                   /* �з���16λ���ͱ���                       */
+"
+"Typedef:USER/main.h:uint16","uint16","USER/main.h",5,5,"typedef unsigned char  uint8;                   /* �޷���8λ���ͱ���                        */
+typedef signed   char  int8;                    /* �з���8λ���ͱ���                        */
+typedef unsigned short uint16;                  /* �޷���16λ���ͱ���                       */
+typedef signed   short int16;                   /* �з���16λ���ͱ���                       */
+typedef unsigned long   uint32;                  /* �޷���32λ���ͱ���                       */
+"
+"Typedef:USER/main.h:int16","int16","USER/main.h",6,6,"typedef signed   char  int8;                    /* �з���8λ���ͱ���                        */
+typedef unsigned short uint16;                  /* �޷���16λ���ͱ���                       */
+typedef signed   short int16;                   /* �з���16λ���ͱ���                       */
+typedef unsigned long   uint32;                  /* �޷���32λ���ͱ���                       */
+typedef signed   long   int32;                   /* �з���32λ���ͱ���                       */
+"
+"Typedef:USER/main.h:uint32","uint32","USER/main.h",7,7,"typedef unsigned short uint16;                  /* �޷���16λ���ͱ���                       */
+typedef signed   short int16;                   /* �з���16λ���ͱ���                       */
+typedef unsigned long   uint32;                  /* �޷���32λ���ͱ���                       */
+typedef signed   long   int32;                   /* �з���32λ���ͱ���                       */
+typedef float          fp32;                    /* �����ȸ�������32λ���ȣ�                 */
+"
+"Typedef:USER/main.h:int32","int32","USER/main.h",8,8,"typedef signed   short int16;                   /* �з���16λ���ͱ���                       */
+typedef unsigned long   uint32;                  /* �޷���32λ���ͱ���                       */
+typedef signed   long   int32;                   /* �з���32λ���ͱ���                       */
+typedef float          fp32;                    /* �����ȸ�������32λ���ȣ�                 */
+typedef double         fp64;                    /* ˫���ȸ�������64λ���ȣ� 				*/
+"
+"Typedef:USER/main.h:fp32","fp32","USER/main.h",9,9,"typedef unsigned long   uint32;                  /* �޷���32λ���ͱ���                       */
+typedef signed   long   int32;                   /* �з���32λ���ͱ���                       */
+typedef float          fp32;                    /* �����ȸ�������32λ���ȣ�                 */
+typedef double         fp64;                    /* ˫���ȸ�������64λ���ȣ� 				*/
+
+"
+"Typedef:USER/main.h:fp64","fp64","USER/main.h",10,10,"typedef signed   long   int32;                   /* �з���32λ���ͱ���                       */
+typedef float          fp32;                    /* �����ȸ�������32λ���ȣ�                 */
+typedef double         fp64;                    /* ˫���ȸ�������64λ���ȣ� 				*/
+
+
+"
+"Typedef:CORE/core_cm3.h:NVIC_Type","NVIC_Type","CORE/core_cm3.h",146,146,"       uint32_t RESERVED5[644];                                  
+  __O  uint32_t STIR;                         /*!< Offset: 0xE00  Software Trigger Interrupt Register     */
+}  NVIC_Type;                                               
+/*@}*/ /* end of group CMSIS_CM3_NVIC */
+
+"
+"Typedef:CORE/core_cm3.h:SCB_Type","SCB_Type","CORE/core_cm3.h",175,175,"  __I  uint32_t MMFR[4];                      /*!< Offset: 0x50  Memory Model Feature Register                         */
+  __I  uint32_t ISAR[5];                      /*!< Offset: 0x60  ISA Feature Register                                  */
+} SCB_Type;                                                
+
+/* SCB CPUID Register Definitions */
+"
+"Typedef:CORE/core_cm3.h:SysTick_Type","SysTick_Type","CORE/core_cm3.h",370,370,"  __IO uint32_t VAL;                          /*!< Offset: 0x08  SysTick Current Value Register      */
+  __I  uint32_t CALIB;                        /*!< Offset: 0x0C  SysTick Calibration Register        */
+} SysTick_Type;
+
+/* SysTick Control / Status Register Definitions */
+"
+"Typedef:CORE/core_cm3.h:InterruptType_Type","InterruptType_Type","CORE/core_cm3.h",511,511,"       uint32_t RESERVED1;
+#endif
+} InterruptType_Type;
+
+/* Interrupt Controller Type Register Definitions */
+"
+"Typedef:CORE/core_cm3.h:MPU_Type","MPU_Type","CORE/core_cm3.h",547,547,"  __IO uint32_t RBAR_A3;                      /*!< Offset: 0x24  MPU Alias 3 Region Base Address Register       */
+  __IO uint32_t RASR_A3;                      /*!< Offset: 0x28  MPU Alias 3 Region Attribute and Size Register */
+} MPU_Type;                                                
+
+/* MPU Type Register */
+"
+"Typedef:CORE/core_cm3.h:CoreDebug_Type","CoreDebug_Type","CORE/core_cm3.h",625,625,"  __IO uint32_t DCRDR;                        /*!< Offset: 0x08  Debug Core Register Data Register            */
+  __IO uint32_t DEMCR;                        /*!< Offset: 0x0C  Debug Exception and Monitor Control Register */
+} CoreDebug_Type;
+
+/* Debug Halting Control and Status Register */
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_usart.h:USART_InitTypeDef","USART_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_usart.h",75,75,"                                           or disabled.
+                                           This parameter can be a value of @ref USART_Hardware_Flow_Control */
+} USART_InitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_usart.h:USART_ClockInitTypeDef","USART_ClockInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_usart.h",96,96,"                               data bit (MSB) has to be output on the SCLK pin in synchronous mode.
+                               This parameter can be a value of @ref USART_Last_Bit */
+} USART_ClockInitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_tim.h:TIM_TimeBaseInitTypeDef","TIM_TimeBaseInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_tim.h",73,73,"                                       This parameter must be a number between 0x00 and 0xFF. 
+                                       @note This parameter is valid only for TIM1 and TIM8. */
+} TIM_TimeBaseInitTypeDef;       
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_tim.h:TIM_OCInitTypeDef","TIM_OCInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_tim.h",108,108,"                                   This parameter can be a value of @ref TIM_Output_Compare_N_Idle_State
+                                   @note This parameter is valid only for TIM1 and TIM8. */
+} TIM_OCInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_tim.h:TIM_ICInitTypeDef","TIM_ICInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_tim.h",131,131,"  uint16_t TIM_ICFilter;     /*!< Specifies the input capture filter.
+                                  This parameter can be a number between 0x0 and 0xF */
+} TIM_ICInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_tim.h:TIM_BDTRInitTypeDef","TIM_BDTRInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_tim.h",162,162,"  uint16_t TIM_AutomaticOutput;  /*!< Specifies whether the TIM Automatic Output feature is enabled or not. 
+                                      This parameter can be a value of @ref TIM_AOE_Bit_Set_Reset */
+} TIM_BDTRInitTypeDef;
+
+/** @defgroup TIM_Exported_constants 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_spi.h:SPI_InitTypeDef","SPI_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_spi.h",80,80,"
+  uint16_t SPI_CRCPolynomial;       /*!< Specifies the polynomial used for the CRC calculation. */
+}SPI_InitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_spi.h:I2S_InitTypeDef","I2S_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_spi.h",106,106,"  uint16_t I2S_CPOL;         /*!< Specifies the idle state of the I2S clock.
+                                  This parameter can be a value of @ref I2S_Clock_Polarity */
+}I2S_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_sdio.h:SDIO_InitTypeDef","SDIO_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_sdio.h",67,67,"                                           This parameter can be a value between 0x00 and 0xFF. */
+                                           
+} SDIO_InitTypeDef;
+
+typedef struct
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_sdio.h:SDIO_CmdInitTypeDef","SDIO_CmdInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_sdio.h",87,87,"                                is enabled or disabled.
+                                This parameter can be a value of @ref SDIO_CPSM_State */
+} SDIO_CmdInitTypeDef;
+
+typedef struct
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_sdio.h:SDIO_DataInitTypeDef","SDIO_DataInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_sdio.h",108,108,"                                     is enabled or disabled.
+                                     This parameter can be a value of @ref SDIO_DPSM_State */
+} SDIO_DataInitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_rcc.h:RCC_ClocksTypeDef","RCC_ClocksTypeDef","STM32F10x_FWLib/inc/stm32f10x_rcc.h",52,52,"  uint32_t PCLK2_Frequency;   /*!< returns PCLK2 clock frequency expressed in Hz */
+  uint32_t ADCCLK_Frequency;  /*!< returns ADCCLK clock frequency expressed in Hz */
+}RCC_ClocksTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_i2c.h:I2C_InitTypeDef","I2C_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_i2c.h",68,68,"  uint16_t I2C_AcknowledgedAddress; /*!< Specifies if 7-bit or 10-bit address is acknowledged.
+                                         This parameter can be a value of @ref I2C_acknowledged_address */
+}I2C_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_gpio.h:GPIOSpeed_TypeDef","GPIOSpeed_TypeDef","STM32F10x_FWLib/inc/stm32f10x_gpio.h",62,62,"  GPIO_Speed_2MHz, 
+  GPIO_Speed_50MHz
+}GPIOSpeed_TypeDef;
+#define IS_GPIO_SPEED(SPEED) (((SPEED) == GPIO_Speed_10MHz) || ((SPEED) == GPIO_Speed_2MHz) || \
+                              ((SPEED) == GPIO_Speed_50MHz))
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_gpio.h:GPIOMode_TypeDef","GPIOMode_TypeDef","STM32F10x_FWLib/inc/stm32f10x_gpio.h",79,79,"  GPIO_Mode_AF_OD = 0x1C,
+  GPIO_Mode_AF_PP = 0x18
+}GPIOMode_TypeDef;
+
+#define IS_GPIO_MODE(MODE) (((MODE) == GPIO_Mode_AIN) || ((MODE) == GPIO_Mode_IN_FLOATING) || \
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_gpio.h:GPIO_InitTypeDef","GPIO_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_gpio.h",100,100,"  GPIOMode_TypeDef GPIO_Mode;    /*!< Specifies the operating mode for the selected pins.
+                                      This parameter can be a value of @ref GPIOMode_TypeDef */
+}GPIO_InitTypeDef;
+
+
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_gpio.h:BitAction","BitAction","STM32F10x_FWLib/inc/stm32f10x_gpio.h",110,110,"{ Bit_RESET = 0,
+  Bit_SET
+}BitAction;
+
+#define IS_GPIO_BIT_ACTION(ACTION) (((ACTION) == Bit_RESET) || ((ACTION) == Bit_SET))
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_fsmc.h:FSMC_NORSRAMTimingInitTypeDef","FSMC_NORSRAMTimingInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_fsmc.h",85,85,"  uint32_t FSMC_AccessMode;             /*!< Specifies the asynchronous access mode. 
+                                             This parameter can be a value of @ref FSMC_Access_Mode */
+}FSMC_NORSRAMTimingInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_fsmc.h:FSMC_NORSRAMInitTypeDef","FSMC_NORSRAMInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_fsmc.h",144,144,"
+  FSMC_NORSRAMTimingInitTypeDef* FSMC_WriteTimingStruct;     /*!< Timing Parameters for write access if the  ExtendedMode is used*/      
+}FSMC_NORSRAMInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_fsmc.h:FSMC_NAND_PCCARDTimingInitTypeDef","FSMC_NAND_PCCARDTimingInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_fsmc.h",176,176,"                                     on the memory space timing to be configured).
+                                     This parameter can be a number between 0x00 and 0xFF */
+}FSMC_NAND_PCCARDTimingInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_fsmc.h:FSMC_NANDInitTypeDef","FSMC_NANDInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_fsmc.h",210,210,"
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_AttributeSpaceTimingStruct; /*!< FSMC Attribute Space Timing */
+}FSMC_NANDInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_fsmc.h:FSMC_PCCARDInitTypeDef","FSMC_PCCARDInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_fsmc.h",235,235,"  
+  FSMC_NAND_PCCARDTimingInitTypeDef*  FSMC_IOSpaceTimingStruct; /*!< FSMC IO Space Timing */  
+}FSMC_PCCARDInitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_flash.h:FLASH_Status","FLASH_Status","STM32F10x_FWLib/inc/stm32f10x_flash.h",56,56,"  FLASH_COMPLETE,
+  FLASH_TIMEOUT
+}FLASH_Status;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_exti.h:EXTIMode_TypeDef","EXTIMode_TypeDef","STM32F10x_FWLib/inc/stm32f10x_exti.h",53,53,"  EXTI_Mode_Interrupt = 0x00,
+  EXTI_Mode_Event = 0x04
+}EXTIMode_TypeDef;
+
+#define IS_EXTI_MODE(MODE) (((MODE) == EXTI_Mode_Interrupt) || ((MODE) == EXTI_Mode_Event))
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_exti.h:EXTITrigger_TypeDef","EXTITrigger_TypeDef","STM32F10x_FWLib/inc/stm32f10x_exti.h",66,66,"  EXTI_Trigger_Falling = 0x0C,  
+  EXTI_Trigger_Rising_Falling = 0x10
+}EXTITrigger_TypeDef;
+
+#define IS_EXTI_TRIGGER(TRIGGER) (((TRIGGER) == EXTI_Trigger_Rising) || \
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_exti.h:EXTI_InitTypeDef","EXTI_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_exti.h",88,88,"  FunctionalState EXTI_LineCmd;     /*!< Specifies the new state of the selected EXTI lines.
+                                         This parameter can be set either to ENABLE or DISABLE */ 
+}EXTI_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_dma.h:DMA_InitTypeDef","DMA_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_dma.h",84,84,"  uint32_t DMA_M2M;                /*!< Specifies if the DMAy Channelx will be used in memory-to-memory transfer.
+                                        This parameter can be a value of @ref DMA_memory_to_memory */
+}DMA_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_dac.h:DAC_InitTypeDef","DAC_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_dac.h",64,64,"  uint32_t DAC_OutputBuffer;                 /*!< Specifies whether the DAC channel output buffer is enabled or disabled.
+                                                  This parameter can be a value of @ref DAC_output_buffer */
+}DAC_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_cec.h:CEC_InitTypeDef","CEC_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_cec.h",55,55,"  uint16_t CEC_BitPeriodMode; /*!< Configures the CEC Bit Period Error Mode. 
+                               This parameter can be a value of @ref CEC_BitPeriod_Mode */
+}CEC_InitTypeDef;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_can.h:CAN_InitTypeDef","CAN_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_can.h",99,99,"                                  This parameter can be set either to ENABLE 
+                                  or DISABLE. */
+} CAN_InitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_can.h:CAN_FilterInitTypeDef","CAN_FilterInitTypeDef","STM32F10x_FWLib/inc/stm32f10x_can.h",138,138,"  FunctionalState CAN_FilterActivation; /*!< Enable or disable the filter.
+                                              This parameter can be set either to ENABLE or DISABLE. */
+} CAN_FilterInitTypeDef;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_can.h:CanTxMsg","CanTxMsg","STM32F10x_FWLib/inc/stm32f10x_can.h",166,166,"  uint8_t Data[8]; /*!< Contains the data to be transmitted. It ranges from 0 
+                        to 0xFF. */
+} CanTxMsg;
+
+/** 
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_can.h:CanRxMsg","CanRxMsg","STM32F10x_FWLib/inc/stm32f10x_can.h",197,197,"                        the mailbox passes through. This parameter can be a 
+                        value between 0 to 0xFF */
+} CanRxMsg;
+
+/**
+"
+"Typedef:STM32F10x_FWLib/inc/stm32f10x_adc.h:ADC_InitTypeDef","ADC_InitTypeDef","STM32F10x_FWLib/inc/stm32f10x_adc.h",73,73,"                                               using the sequencer for regular channel group.
+                                               This parameter must range from 1 to 16. */
+}ADC_InitTypeDef;
+/**
+  * @}
+"
+"Typedef:STM32F10x_FWLib/inc/misc.h:NVIC_InitTypeDef","NVIC_InitTypeDef","STM32F10x_FWLib/inc/misc.h",67,67,"                                                   will be enabled or disabled. 
+                                                   This parameter can be set either to ENABLE or DISABLE */   
+} NVIC_InitTypeDef;
+ 
+/**
+"
+"Typedef:SYSTEM/usart/usart.h:RTU_DATA","RTU_DATA","SYSTEM/usart/usart.h",95,95,"		 
+		
+}RTU_DATA;
+
+
+"
+"Typedef:SYSTEM/rtc/bsp_date.h:Date","Date","SYSTEM/rtc/bsp_date.h",32,32,"	int iDay;
+
+}Date;
+
+    
+"
+"Typedef:SYSTEM/system_control/system_control.h:JUMP_TYPE","JUMP_TYPE","SYSTEM/system_control/system_control.h",133,133,"
+
+ typedef enum {First, Second, Third, Fourth,Five,Six,Seven,Eight,Nine,Ten,ELeven,Twleve,Thirteen,Fourteen,Fifteen,Sixteen} JUMP_TYPE;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:SYS_INF","SYS_INF","SYSTEM/system_control/system_control.h",262,262,"	
+	
+}SYS_INF;
+
+typedef union _COPY_SYS_INF
+"
+"Typedef:SYSTEM/system_control/system_control.h:SYS_COPY","SYS_COPY","SYSTEM/system_control/system_control.h",268,268,"	uint8 array[100];
+	SYS_INF sym_data;
+}SYS_COPY;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:AB_EVENTS","AB_EVENTS","SYSTEM/system_control/system_control.h",286,286,"
+		uint8 target_complete_event;//�ﵽ�趨�¶���������
+}AB_EVENTS;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:SYS_CONFIG","SYS_CONFIG","SYSTEM/system_control/system_control.h",307,307,"
+			
+}SYS_CONFIG;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:SYS_ADMIN","SYS_ADMIN","SYSTEM/system_control/system_control.h",403,403,"	
+
+}SYS_ADMIN;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:SYS_WORK_TIME","SYS_WORK_TIME","SYSTEM/system_control/system_control.h",416,416,"	  uint32 UnPaiwuMinutes;
+	  
+}SYS_WORK_TIME;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:LCD_MEM","LCD_MEM","SYSTEM/system_control/system_control.h",565,565,"	
+	
+}LCD_MEM;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:Login_TT","Login_TT","SYSTEM/system_control/system_control.h",578,578,"	  
+	  
+}Login_TT;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:LCD_MAM","LCD_MAM","SYSTEM/system_control/system_control.h",604,604,"	
+	
+}LCD_MAM;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:Lcd_Read_Data","Lcd_Read_Data","SYSTEM/system_control/system_control.h",673,673,"
+
+}Lcd_Read_Data;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:IO_DATA","IO_DATA","SYSTEM/system_control/system_control.h",709,709,"		
+	
+}IO_DATA;
+
+typedef union _FLOAT_S
+"
+"Typedef:SYSTEM/system_control/system_control.h:FLP_INT","FLP_INT","SYSTEM/system_control/system_control.h",722,722,"
+			}byte4;
+}FLP_INT;
+
+typedef union _UINT32_S
+"
+"Typedef:SYSTEM/system_control/system_control.h:BYTE_INT32","BYTE_INT32","SYSTEM/system_control/system_control.h",735,735,"
+			}byte4;
+}BYTE_INT32;
+
+typedef union _4byte2word
+"
+"Typedef:SYSTEM/system_control/system_control.h:BYTE_WORD4","BYTE_WORD4","SYSTEM/system_control/system_control.h",747,747,"				uint8 data_LL;		
+			}byte4;
+}BYTE_WORD4;
+
+typedef union _2byte1word
+"
+"Typedef:SYSTEM/system_control/system_control.h:BYTE_WORD1","BYTE_WORD1","SYSTEM/system_control/system_control.h",757,757,"				uint8 data_H;		
+			}byte2;
+}BYTE_WORD1;
+
+//lcd ��·�¶�����ͼ���ݽṹ��
+"
+"Typedef:SYSTEM/system_control/system_control.h:LCD_QuXian","LCD_QuXian","SYSTEM/system_control/system_control.h",774,774,"	uint8 smoke_tem_H;
+	uint8 smoke_tem_L;
+}LCD_QuXian;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:ERR_LCD","ERR_LCD","SYSTEM/system_control/system_control.h",830,830,"
+		
+}ERR_LCD;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:LCD_E_M","LCD_E_M","SYSTEM/system_control/system_control.h",847,847,"	uint8 data_L;
+	
+}LCD_E_M;
+
+typedef struct Load_ERR_S
+"
+"Typedef:SYSTEM/system_control/system_control.h:ERROR_DATE_STRUCT","ERROR_DATE_STRUCT","SYSTEM/system_control/system_control.h",859,859,"	LCD_E_M  Error7;
+	LCD_E_M  Error8;
+}ERROR_DATE_STRUCT;
+
+typedef struct Load_LCD_FLASH
+"
+"Typedef:SYSTEM/system_control/system_control.h:LCD_FLASH_STRUCT","LCD_FLASH_STRUCT","SYSTEM/system_control/system_control.h",873,873,"	LCD_E_M  Error7;
+	LCD_E_M  Error8;
+}LCD_FLASH_STRUCT;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:UART_DATA","UART_DATA","SYSTEM/system_control/system_control.h",888,888,"	uint8 Recive_Ok_Flag;//��ȫ������ɱ�־
+	uint8 Flag_100ms;  //100ms  Flag
+}UART_DATA;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:sys_flags","sys_flags","SYSTEM/system_control/system_control.h",1133,1133,"
+		
+}sys_flags;
+
+
+"
+"Typedef:SYSTEM/system_control/system_control.h:FLOW_CONTROL_DEVICE","FLOW_CONTROL_DEVICE","SYSTEM/system_control/system_control.h",1155,1155," 	 
+ 	  
+}FLOW_CONTROL_DEVICE;
+
+typedef struct _water_logic_f // 
+"
+"Typedef:SYSTEM/system_control/system_control.h:Logic_Water","Logic_Water","SYSTEM/system_control/system_control.h",1173,1173,"		uint16 PUMP_Close_Time;//ˮ�ÿ�����ʱ��
+	  
+}Logic_Water;
+
+typedef struct UPIDSS //ϵͳ�ۼ�ʱ��ṹ��
+"
+"Typedef:SYSTEM/system_control/system_control.h:UPID","UPID","SYSTEM/system_control/system_control.h",1202,1202," 	 
+ 	  
+}UPID;
+
+
+"
+"Typedef:SYSTEM/out_flash/bsp_spi_flash.h:TestStatus","TestStatus","SYSTEM/out_flash/bsp_spi_flash.h",88,88,"
+
+typedef enum { FAILED = 0, PASSED = !FAILED} TestStatus;
+
+#define countof(a)      (sizeof(a) / sizeof(*(a)))
+"
+"Typedef:SYSTEM/out_flash/bsp_spi_flash.h:OUT_FLASH_BULID","OUT_FLASH_BULID","SYSTEM/out_flash/bsp_spi_flash.h",131,131,"		
+ 	  
+}OUT_FLASH_BULID;
+
+
+"
+"Typedef:SYSTEM/activate_key/activate_key.h:Data_Product","Data_Product","SYSTEM/activate_key/activate_key.h",45,45,"	uint16  product_begin_number;
+	uint16  product_end_number ;
+	}Data_Product;
+
+
+"
+"Typedef:SYSTEM/activate_key/activate_key.h:Key_Struct","Key_Struct","SYSTEM/activate_key/activate_key.h",56,56,"		uint16  key4_buff;
+
+}Key_Struct;//���ڴ����û�����ļ�����
+
+
+"
+"Typedef:HARDWARE/USR_C210/usr_c210.h:WWW_DATA","WWW_DATA","HARDWARE/USR_C210/usr_c210.h",76,76,"		 
+		
+}WWW_DATA;
+
+
+"
+"Typedef:HARDWARE/USART5/usart5.h:LCD_SDATA","LCD_SDATA","HARDWARE/USART5/usart5.h",64,64,"	
+	
+}LCD_SDATA;
+
+
+"
+"Typedef:HARDWARE/USART4/usart4.h:PROTOCOL_COMMAND","PROTOCOL_COMMAND","HARDWARE/USART4/usart4.h",51,51,"	uint8_t cmd;
+	uint8_t data[32];
+}PROTOCOL_COMMAND;
+
+
+"
+"Typedef:HARDWARE/USART4/usart4.h:UNION_GG","UNION_GG","HARDWARE/USART4/usart4.h",69,69,"	
+	
+}UNION_GG;
+
+
+"
+"Typedef:HARDWARE/USART4/usart4.h:SLAVE_GG","SLAVE_GG","HARDWARE/USART4/usart4.h",152,152,"			uint16 Inside_WenDu_ProtectValue;
+	
+}SLAVE_GG;//�ӻ��Ŀ�������̨
+
+
+"
+"Typedef:HARDWARE/USART4/usart4.h:Slave_GG","Slave_GG","HARDWARE/USART4/usart4.h",182,182,"
+	
+}Slave_GG;
+
+
+"
+"Typedef:HARDWARE/USART4/usart4.h:USlave_Struct","USlave_Struct","HARDWARE/USART4/usart4.h",193,193,"	Slave_GG Slave_D;
+	
+}USlave_Struct;
+
+
+"
+"Typedef:HARDWARE/relays/bsp_relays.h:SWITCH_STATUS","SWITCH_STATUS","HARDWARE/relays/bsp_relays.h",154,154,"	volatile	uint8 CloseWait_3ms;   //�ӳ�3ms
+		
+}SWITCH_STATUS;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:UNION_FLAGS","UNION_FLAGS","HARDWARE/USART2/usart2.h",23,23,"	uint8 Cong_Less_Flag;
+	
+}UNION_FLAGS;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:UtoSlave_Info","UtoSlave_Info","HARDWARE/USART2/usart2.h",56,56,"		}True;
+	
+}	UtoSlave_Info;  //����ӻ����յ���������Э��Ľ���
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:Duble5_Info","Duble5_Info","HARDWARE/USART2/usart2.h",102,102,"		}True;
+	
+}	Duble5_Info;  //˫ƴ1��;�ӻ����͸�����������
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD_GG","LCD_GG","HARDWARE/USART2/usart2.h",179,179,"	
+
+}LCD_GG;
+typedef union  _LCD10_MsESS
+{  //
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD10Struct","LCD10Struct","HARDWARE/USART2/usart2.h",186,186,"	LCD_GG DLCD;
+	
+}LCD10Struct;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:UNION_GGA","UNION_GGA","HARDWARE/USART2/usart2.h",270,270,"	
+	
+}UNION_GGA;
+
+typedef union  _LCD10_MAsESS
+"
+"Typedef:HARDWARE/USART2/usart2.h:ALCD10Struct","ALCD10Struct","HARDWARE/USART2/usart2.h",278,278,"	UNION_GGA UnionD;
+	
+}ALCD10Struct;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD_JZ","LCD_JZ","HARDWARE/USART2/usart2.h",328,328,"	
+
+}LCD_JZ;
+typedef union  _LCD10JZ_MsESS
+{  //
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD10_JZ_Struct","LCD10_JZ_Struct","HARDWARE/USART2/usart2.h",335,335,"	LCD_JZ DLCD;
+	
+}LCD10_JZ_Struct;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD4013_JZ","LCD4013_JZ","HARDWARE/USART2/usart2.h",407,407,"	
+
+}LCD4013_JZ;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD4013_Struct","LCD4013_Struct","HARDWARE/USART2/usart2.h",416,416,"	LCD4013_JZ DLCD;
+	
+}LCD4013_Struct;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD10K1_Struct","LCD10K1_Struct","HARDWARE/USART2/usart2.h",427,427,"	 
+	
+}LCD10K1_Struct;
+
+
+"
+"Typedef:HARDWARE/USART2/usart2.h:LCD_WR","LCD_WR","HARDWARE/USART2/usart2.h",455,455,"	
+	
+}LCD_WR ;  //ֻд
+
+
+"
+"Typedef:HARDWARE/led/bsp_led.h:Beep_Message","Beep_Message","HARDWARE/led/bsp_led.h",18,18,"	
+		
+}Beep_Message;
+
+//#define Beep_Period_Time  500 ;//�趨����ʱ��500MS
+"
+"Typedef:HARDWARE/led/bsp_led.h:SPI_GPIO","SPI_GPIO","HARDWARE/led/bsp_led.h",139,139,"		DIN,
+		DOUT
+	}SPI_GPIO;
+
+	typedef struct 
+"
+"Typedef:HARDWARE/led/bsp_led.h:SPI_InitType","SPI_InitType","HARDWARE/led/bsp_led.h",145,145,"	   GPIO_TypeDef *port[4];
+	   uint16_t pin[4];	
+	}SPI_InitType;
+
+
+"
+"Typedef:HARDWARE/ADC/bsp_adc.h:TEM_VALUE","TEM_VALUE","HARDWARE/ADC/bsp_adc.h",84,84,"			uint16 inside_water_value;  //�ڲ�ˮѭ�����¶�
+			uint16 Inside_High_Pressure;  //�ڲ�
+}TEM_VALUE;
+
+extern TEM_VALUE Temperature_Data;
+"
+"Typedef:HARDWARE/ADS1220/ADS1220.h:ADS1220_GPIO","ADS1220_GPIO","HARDWARE/ADS1220/ADS1220.h",19,19,"	ADS1220_DOUT,
+	ADS1220_DRDY
+}ADS1220_GPIO;
+
+typedef enum
+"
+"Typedef:HARDWARE/ADS1220/ADS1220.h:ADS1220_Gain","ADS1220_Gain","HARDWARE/ADS1220/ADS1220.h",32,32,"	GAIN_128 =0X0E
+	
+}ADS1220_Gain;
+
+typedef struct 
+"
+"Typedef:HARDWARE/ADS1220/ADS1220.h:ADS1220_InitType","ADS1220_InitType","HARDWARE/ADS1220/ADS1220.h",38,38,"   GPIO_TypeDef *port[5];
+   uint16_t pin[5];	
+}ADS1220_InitType;
+
+extern ADS1220_InitType ADS1220_Init;
+"

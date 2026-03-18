@@ -1,0 +1,109 @@
+id,name,filePath,startLine,endLine,content
+"Union:SYSTEM/usart/usart.h:_RTU_COM","_RTU_COM","SYSTEM/usart/usart.h",55,55,"
+
+typedef union _RTU_COM
+{
+	uint8 ALL[21];
+"
+"Union:SYSTEM/system_control/system_control.h:_COPY_SYS_INF","_COPY_SYS_INF","SYSTEM/system_control/system_control.h",264,264,"}SYS_INF;
+
+typedef union _COPY_SYS_INF
+{
+	uint8 array[100];
+"
+"Union:SYSTEM/system_control/system_control.h:_LCD_READ","_LCD_READ","SYSTEM/system_control/system_control.h",611,611,"
+
+typedef union _LCD_READ
+{
+		
+"
+"Union:SYSTEM/system_control/system_control.h:_IO_DATA","_IO_DATA","SYSTEM/system_control/system_control.h",682,682,"
+//����ͳ�Ʋ�ת������16λ��IO��Ϣ
+typedef union _IO_DATA
+{
+		 
+"
+"Union:SYSTEM/system_control/system_control.h:_FLOAT_S","_FLOAT_S","SYSTEM/system_control/system_control.h",711,711,"}IO_DATA;
+
+typedef union _FLOAT_S
+{
+		float value;//STM32Ĭ��ΪС��ģʽ
+"
+"Union:SYSTEM/system_control/system_control.h:_UINT32_S","_UINT32_S","SYSTEM/system_control/system_control.h",724,724,"}FLP_INT;
+
+typedef union _UINT32_S
+{
+		uint32 value;//STM32Ĭ��ΪС��ģʽ
+"
+"Union:SYSTEM/system_control/system_control.h:_4byte2word","_4byte2word","SYSTEM/system_control/system_control.h",737,737,"}BYTE_INT32;
+
+typedef union _4byte2word
+{
+		uint32 lcd_secret;
+"
+"Union:SYSTEM/system_control/system_control.h:_2byte1word","_2byte1word","SYSTEM/system_control/system_control.h",749,749,"}BYTE_WORD4;
+
+typedef union _2byte1word
+{
+		uint16 data16;
+"
+"Union:SYSTEM/system_control/system_control.h:_Err_tran","_Err_tran","SYSTEM/system_control/system_control.h",778,778,"
+
+typedef union _Err_tran
+{
+//	uint8 ERR_bit[16];
+"
+"Union:HARDWARE/USR_C210/usr_c210.h:_Internet_COM","_Internet_COM","HARDWARE/USR_C210/usr_c210.h",28,28," 
+
+typedef union _Internet_COM
+{
+	uint8 ALL[35];
+"
+"Union:HARDWARE/USART4/usart4.h:_SLAVE_MsESS","_SLAVE_MsESS","HARDWARE/USART4/usart4.h",187,187,"
+
+typedef union  _SLAVE_MsESS
+{  //
+	uint8 Datas[38];
+"
+"Union:HARDWARE/USART2/usart2.h:_kdsUnion_Inf","_kdsUnion_Inf","HARDWARE/USART2/usart2.h",26,26,"
+
+typedef union _kdsUnion_Inf
+{
+	uint8 RxData[14];
+"
+"Union:HARDWARE/USART2/usart2.h:_Mod_Inf","_Mod_Inf","HARDWARE/USART2/usart2.h",59,59,"
+
+typedef union _Mod_Inf
+{
+	uint8 All[30];
+"
+"Union:HARDWARE/USART2/usart2.h:_LCD10_MsESS","_LCD10_MsESS","HARDWARE/USART2/usart2.h",180,180,"
+}LCD_GG;
+typedef union  _LCD10_MsESS
+{  //
+	uint8 Datas[136]; //����Ҫ�ܹ���4��������������
+"
+"Union:HARDWARE/USART2/usart2.h:_LCD10_MAsESS","_LCD10_MAsESS","HARDWARE/USART2/usart2.h",272,272,"}UNION_GGA;
+
+typedef union  _LCD10_MAsESS
+{  //
+	uint8 Datas[120];
+"
+"Union:HARDWARE/USART2/usart2.h:_LCD10JZ_MsESS","_LCD10JZ_MsESS","HARDWARE/USART2/usart2.h",329,329,"
+}LCD_JZ;
+typedef union  _LCD10JZ_MsESS
+{  //
+	uint8 Datas[72]; //����Ҫ�ܹ���4��������������
+"
+"Union:HARDWARE/USART2/usart2.h:_LCD4013_MsESS","_LCD4013_MsESS","HARDWARE/USART2/usart2.h",410,410,"
+
+typedef union  _LCD4013_MsESS
+{  //
+	uint8 Datas[100]; //����Ҫ�ܹ���4��������������
+"
+"Union:HARDWARE/USART2/usart2.h:_LCD10_MsaESS","_LCD10_MsaESS","HARDWARE/USART2/usart2.h",420,420,"
+
+typedef union  _LCD10_MsaESS
+{  //
+	uint16 HP_WaterValue[10];  
+"

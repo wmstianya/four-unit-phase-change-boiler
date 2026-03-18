@@ -1,0 +1,259 @@
+id,name,filePath,startLine,endLine,content
+"Struct:SYSTEM/usart/usart.c:__FILE","__FILE","SYSTEM/usart/usart.c",11,11,"#pragma import(__use_no_semihosting)             
+////��׼����Ҫ��֧�ֺ���                 
+struct __FILE 
+{ 
+	int handle; 
+"
+"Struct:SYSTEM/rtc/bsp_rtc.h:rtc_time","rtc_time","SYSTEM/rtc/bsp_rtc.h",35,35,"void RTC_NVIC_Config(void);
+void RTC_Configuration(void);
+void Time_Regulate_Get(struct rtc_time *tm);
+void Time_Adjust(struct rtc_time *tm);
+void Time_Display(uint32_t TimeVar,struct rtc_time *tm);
+"
+"Struct:SYSTEM/rtc/bsp_rtc.c:rtc_time","rtc_time","SYSTEM/rtc/bsp_rtc.c",64,64," * ����  ���ⲿ����
+ */
+void RTC_CheckAndConfig(struct rtc_time *tm)
+{
+   	/*������ʱ��鱸�ݼĴ���BKP_DR1��������ݲ���0xA5A5,
+"
+"Struct:SYSTEM/rtc/bsp_date.h:rtc_time","rtc_time","SYSTEM/rtc/bsp_date.h",12,12,"#include ""stm32f10x.h""
+
+struct rtc_time {
+	int tm_sec;
+	int tm_min;
+"
+"Struct:SYSTEM/rtc/bsp_date.c:rtc_time","rtc_time","SYSTEM/rtc/bsp_date.c",32,32," */
+ /*���㹫��*/
+void GregorianDay(struct rtc_time * tm)
+{
+	int leapsToDate;
+"
+"Struct:SYSTEM/system_control/system_control.h:_SYS","_SYS","SYSTEM/system_control/system_control.h",136,136,"
+
+typedef struct _SYS
+{
+	uint8_t Data_10H; 
+"
+"Struct:SYSTEM/system_control/system_control.h:_AB_EVENT","_AB_EVENT","SYSTEM/system_control/system_control.h",273,273,"
+
+typedef struct _AB_EVENT
+{
+		uint8 flameout_event;  //�����У�����Ϩ���쳣
+"
+"Struct:SYSTEM/system_control/system_control.h:_CONFIG","_CONFIG","SYSTEM/system_control/system_control.h",292,292,"
+
+typedef struct _CONFIG
+{
+
+"
+"Struct:SYSTEM/system_control/system_control.h:_ADMIN","_ADMIN","SYSTEM/system_control/system_control.h",311,311,"
+
+typedef struct _ADMIN
+{
+	uint32 First_Blow_Time;
+"
+"Struct:SYSTEM/system_control/system_control.h:_sys_work_time","_sys_work_time","SYSTEM/system_control/system_control.h",407,407,"
+
+typedef struct _sys_work_time //ϵͳ�ۼ�ʱ��ṹ��
+{
+		uint8 sec;
+"
+"Struct:SYSTEM/system_control/system_control.h:_LCD_MESS","_LCD_MESS","SYSTEM/system_control/system_control.h",419,419,"
+
+typedef struct _LCD_MESS  //LCD �ڴ�ṹ��
+{
+	
+"
+"Struct:SYSTEM/system_control/system_control.h:_LOGIN_3SA","_LOGIN_3SA","SYSTEM/system_control/system_control.h",569,569,"
+
+typedef struct _LOGIN_3SA//ϵͳ�ۼ�ʱ��ṹ��
+{
+		
+"
+"Struct:SYSTEM/system_control/system_control.h:_LCD_MASS","_LCD_MASS","SYSTEM/system_control/system_control.h",581,581,"
+
+typedef struct _LCD_MASS  //LCD �ڴ�ṹ��
+{
+	
+"
+"Struct:SYSTEM/system_control/system_control.h:_LCD_PROFILE","_LCD_PROFILE","SYSTEM/system_control/system_control.h",760,760,"
+//lcd ��·�¶�����ͼ���ݽṹ��
+typedef struct _LCD_PROFILE
+{
+	uint8 Head_H;//  = 0x5A;
+"
+"Struct:SYSTEM/system_control/system_control.h:LCDE_R","LCDE_R","SYSTEM/system_control/system_control.h",834,834,"
+//�˽ṹ������LCD��¼������Ϣ
+typedef struct LCDE_R
+{
+	uint8 Cmd;
+"
+"Struct:SYSTEM/system_control/system_control.h:Load_ERR_S","Load_ERR_S","SYSTEM/system_control/system_control.h",849,849,"}LCD_E_M;
+
+typedef struct Load_ERR_S
+{
+	LCD_E_M  Error1;
+"
+"Struct:SYSTEM/system_control/system_control.h:Load_LCD_FLASH","Load_LCD_FLASH","SYSTEM/system_control/system_control.h",861,861,"}ERROR_DATE_STRUCT;
+
+typedef struct Load_LCD_FLASH
+{
+	uint16   data1;
+"
+"Struct:SYSTEM/system_control/system_control.h:_UART_INF","_UART_INF","SYSTEM/system_control/system_control.h",877,877,"
+
+typedef struct _UART_INF
+{
+	uint8 TX_Data[300];//�������ݻ���
+"
+"Struct:SYSTEM/system_control/system_control.h:_sys_flags","_sys_flags","SYSTEM/system_control/system_control.h",893,893,"
+
+typedef struct _sys_flags
+{
+volatile	uint8 XB_WaterLow_Flag;
+"
+"Struct:SYSTEM/system_control/system_control.h:Devie_1","Devie_1","SYSTEM/system_control/system_control.h",1137,1137,"
+
+typedef struct Devie_1 //ϵͳ�ۼ�ʱ��ṹ��
+{
+		uint16 bus_status;//����״̬
+"
+"Struct:SYSTEM/system_control/system_control.h:_water_logic_f","_water_logic_f","SYSTEM/system_control/system_control.h",1157,1157,"}FLOW_CONTROL_DEVICE;
+
+typedef struct _water_logic_f // 
+{
+	   uint8  Zstate_Flag;	//0 Ϊ�ر�״̬��1λ����״̬ 
+"
+"Struct:SYSTEM/system_control/system_control.h:UPIDSS","UPIDSS","SYSTEM/system_control/system_control.h",1175,1175,"}Logic_Water;
+
+typedef struct UPIDSS //ϵͳ�ۼ�ʱ��ṹ��
+{
+		unsigned int SetPoint; // �趨Ŀ��
+"
+"Struct:SYSTEM/system_control/system_control.h:rtc_time","rtc_time","SYSTEM/system_control/system_control.h",1233,1233,"extern  uint32_t BJ_TimeVar;//����ʱ�������
+
+extern struct rtc_time systmtime;  //ʱ��ṹ�����
+
+
+"
+"Struct:SYSTEM/system_control/system_control.h:ERROR_INF","ERROR_INF","SYSTEM/system_control/system_control.h",1300,1300,"
+
+extern struct ERROR_INF ERR_DATA1;
+extern uint16 Man_Set_Pressure;
+
+"
+"Struct:SYSTEM/system_control/system_control.c:rtc_time","rtc_time","SYSTEM/system_control/system_control.c",19,19,"
+/*ʱ��ṹ�壬Ĭ��ʱ��2000-01-01 00:00:00*/
+struct rtc_time systmtime=
+{
+	0,0,0,1,1,2000,0
+"
+"Struct:SYSTEM/out_flash/bsp_spi_flash.h:_FLASH_1_","_FLASH_1_","SYSTEM/out_flash/bsp_spi_flash.h",103,103,"
+
+typedef struct _FLASH_1_ //���ڴ洢��Ϣ�����ݸ�ʽ��λ��
+{
+		__IO uint32_t Buffer_Data;
+"
+"Struct:SYSTEM/activate_key/activate_key.h:p_data","p_data","SYSTEM/activate_key/activate_key.h",41,41,"
+
+typedef struct p_data{
+	uint16	product_zero_number ;
+	uint16  product_begin_number;
+"
+"Struct:SYSTEM/activate_key/activate_key.h:_KEY_STD","_KEY_STD","SYSTEM/activate_key/activate_key.h",49,49,"
+
+typedef struct _KEY_STD
+{
+		uint16  key1_buff;
+"
+"Struct:HARDWARE/USART5/usart5.h:_LCD_GG_","_LCD_GG_","HARDWARE/USART5/usart5.h",29,29,"
+
+typedef struct _LCD_GG_
+{
+	
+"
+"Struct:HARDWARE/USART4/usart4.h:_CMD","_CMD","HARDWARE/USART4/usart4.h",44,44,"#define FRM_L 0xA5
+
+typedef struct _CMD
+{
+	uint8_t header_h;
+"
+"Struct:HARDWARE/USART4/usart4.h:_CMD_UNIS","_CMD_UNIS","HARDWARE/USART4/usart4.h",54,54,"
+
+typedef struct _CMD_UNIS
+{
+	uint16  UnionStartFlag;
+"
+"Struct:HARDWARE/USART4/usart4.h:_SLAVE_G","_SLAVE_G","HARDWARE/USART4/usart4.h",72,72,"
+
+typedef struct _SLAVE_G
+{
+	uint8 Dev_State;
+"
+"Struct:HARDWARE/USART4/usart4.h:_CCMD_UNIS","_CCMD_UNIS","HARDWARE/USART4/usart4.h",155,155,"
+
+typedef struct _CCMD_UNIS
+{
+	uint16  Flame; //ͬ���������ñ�־
+"
+"Struct:HARDWARE/relays/bsp_relays.h:_RELAYSF","_RELAYSF","HARDWARE/relays/bsp_relays.h",133,133,"
+
+typedef struct _RELAYSF
+{
+	volatile	uint8  dian_huo_flag;  //�������־
+"
+"Struct:HARDWARE/USART2/usart2.h:_UNION_flags","_UNION_flags","HARDWARE/USART2/usart2.h",12,12,"#define             macUSART2                                USART2
+
+typedef struct _UNION_flags
+{
+volatile	uint8 Big_Timer_Flag;
+"
+"Struct:HARDWARE/USART2/usart2.h:_LCD_UNIS","_LCD_UNIS","HARDWARE/USART2/usart2.h",105,105,"
+
+typedef struct _LCD_UNIS
+{
+	
+"
+"Struct:HARDWARE/USART2/usart2.h:_CMD_UANIS","_CMD_UANIS","HARDWARE/USART2/usart2.h",192,192,"
+
+typedef struct _CMD_UANIS
+{
+	
+"
+"Struct:HARDWARE/USART2/usart2.h:_LCDJZ_UNIS","_LCDJZ_UNIS","HARDWARE/USART2/usart2.h",282,282,"
+
+typedef struct _LCDJZ_UNIS
+{
+	//���ڸ��ӻ���������ʾ
+"
+"Struct:HARDWARE/USART2/usart2.h:_LCD4013JZ_UNIS","_LCD4013JZ_UNIS","HARDWARE/USART2/usart2.h",339,339,"
+
+typedef struct _LCD4013JZ_UNIS
+{
+	//���ڻ������4013ʹ��
+"
+"Struct:HARDWARE/USART2/usart2.h:_LCD_WRUNIS","_LCD_WRUNIS","HARDWARE/USART2/usart2.h",432,432,"
+
+typedef struct _LCD_WRUNIS
+{
+	
+"
+"Struct:HARDWARE/Parallel_Serial/bsp_parallel_serial.c:HEF_4021B","HEF_4021B","HARDWARE/Parallel_Serial/bsp_parallel_serial.c",16,16,"
+
+struct HEF_4021B{
+		uint8  Din_1[8];
+		uint8  Din_2[8];
+"
+"Struct:HARDWARE/led/bsp_led.h:_BEEP","_BEEP","HARDWARE/led/bsp_led.h",8,8,"
+
+typedef struct _BEEP
+{
+		uint16 beep_time_set;
+"
+"Struct:HARDWARE/ADC/bsp_adc.h:_TEMPURE_","_TEMPURE_","HARDWARE/ADC/bsp_adc.h",74,74,"
+//��·���½ṹ��
+typedef struct _TEMPURE_
+{
+		  uint16 Main_Tem ;
+"

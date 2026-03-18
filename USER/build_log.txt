@@ -1,0 +1,424 @@
+Build target 'Target 1'
+compiling main.c...
+main.c(52): warning:  #223-D: function "IO_Interrupt_Config" declared implicitly
+        IO_Interrupt_Config();
+main.c: 1 warning, 0 errors
+compiling stm32f10x_it.c...
+stm32f10x_it.c(575): warning:  #177-D: variable "Hcount" was declared but never referenced
+        static uint8 Hcount = 0;
+stm32f10x_it.c(576): warning:  #177-D: variable "H_Flag" was declared but never referenced
+        static uint8 H_Flag = 0;
+stm32f10x_it.c(577): warning:  #177-D: variable "Lcount" was declared but never referenced
+        static uint8 Lcount = 0;
+stm32f10x_it.c(607): warning:  #177-D: variable "time_20s" was declared but never referenced
+        static uint32 time_20s = 0;
+stm32f10x_it.c(608): warning:  #177-D: variable "time_60s" was declared but never referenced
+        static uint8 time_60s = 0;
+stm32f10x_it.c(611): warning:  #177-D: variable "index" was declared but never referenced
+        uint8 index = 0;
+stm32f10x_it.c(1021): warning:  #177-D: variable "New_Version" was declared but never referenced
+        uint8 New_Version = FALSE;//新版本蜂鸣器是电平驱动，老版本是频率驱动
+stm32f10x_it.c: 7 warnings, 0 errors
+compiling delay.c...
+compiling usart.c...
+..\SYSTEM\usart\usart.c(348): warning:  #177-D: variable "Data" was declared but never referenced
+     uint16 Data = 0; 
+..\SYSTEM\usart\usart.c(350): warning:  #177-D: variable "value_buffer" was declared but never referenced
+     float  value_buffer = 0;
+..\SYSTEM\usart\usart.c(353): warning:  #177-D: variable "Data2" was declared but never referenced
+     uint16 Data2 = 0;
+..\SYSTEM\usart\usart.c(354): warning:  #177-D: variable "Data3" was declared but never referenced
+     uint16 Data3 = 0;
+..\SYSTEM\usart\usart.c(355): warning:  #177-D: variable "Data32_Buffer" was declared but never referenced
+     uint32 Data32_Buffer = 0;
+..\SYSTEM\usart\usart.c(356): warning:  #177-D: variable "Int_CharH" was declared but never referenced
+     uint32 Int_CharH = 0;
+..\SYSTEM\usart\usart.c(357): warning:  #177-D: variable "Int_CHarL" was declared but never referenced
+     uint32 Int_CHarL = 0;
+..\SYSTEM\usart\usart.c(358): warning:  #177-D: variable "Code" was declared but never referenced
+     uint8 Code[6] = {0};
+..\SYSTEM\usart\usart.c: 8 warnings, 0 errors
+compiling system_control.c...
+..\SYSTEM\system_control\system_control.c(121): warning:  #177-D: variable "Error16_Time" was declared but never referenced
+        uint8  Error16_Time = 8;
+..\SYSTEM\system_control\system_control.c(950): warning:  #177-D: variable "Man_Set_Pressure" was declared but never referenced
+                static  uint16  Man_Set_Pressure = 0;  //1kg = 0.1Mpa  用于系统全局变量，用户可调节,当表示温度时，300 = 30.0度
+..\SYSTEM\system_control\system_control.c(953): warning:  #177-D: variable "stop_wait_pressure" was declared but never referenced
+                static  uint16          stop_wait_pressure = 0; //用于达到目标设定值时，风机功率记录 
+..\SYSTEM\system_control\system_control.c(1022): warning:  #177-D: variable "Max_Pressure" was declared but never referenced
+                uint16 Max_Pressure = 150;  //15公斤  1.50Mpa
+..\SYSTEM\system_control\system_control.c(1690): warning:  #177-D: variable "Old_Error" was declared but never referenced
+        static uint8 Old_Error = 0;
+..\SYSTEM\system_control\system_control.c(2033): warning:  #177-D: variable "temp" was declared but never referenced
+        uint8 temp = 0;
+..\SYSTEM\system_control\system_control.c(2236): warning:  #177-D: variable "temp" was declared but never referenced
+        uint8 temp = 0;
+..\SYSTEM\system_control\system_control.c(2265): warning:  #177-D: variable "Fbuffer" was declared but never referenced
+        float Fbuffer = 3.3 ;
+..\SYSTEM\system_control\system_control.c(2615): warning:  #177-D: variable "ResData" was declared but never referenced
+        float ResData = 0;
+..\SYSTEM\system_control\system_control.c(2632): warning:  #177-D: variable "Pulse" was declared but never referenced
+                static uint8 Pulse = 2;    //两吨风机每转5个脉冲
+..\SYSTEM\system_control\system_control.c(2634): warning:  #177-D: variable "All_Fan_counts" was declared but never referenced
+                uint32 All_Fan_counts = 0;
+..\SYSTEM\system_control\system_control.c(2765): warning:  #177-D: variable "PaiWu_Count" was declared but never referenced
+        static uint8 PaiWu_Count = 0;
+..\SYSTEM\system_control\system_control.c(2766): warning:  #177-D: variable "Paiwu_Times" was declared but never referenced
+        uint8  Paiwu_Times = 3;  //4次降压排污
+..\SYSTEM\system_control\system_control.c(2769): warning:  #177-D: variable "Time" was declared but never referenced
+        uint8  Time = 15;//超过压力补水30秒
+..\SYSTEM\system_control\system_control.c(2996): warning:  #177-D: variable "High_Flag" was declared but never referenced
+        static uint8 High_Flag = 0;
+..\SYSTEM\system_control\system_control.c(3214): warning:  #177-D: variable "Cong_Work_Time" was declared but never referenced
+        uint16 Cong_Work_Time = 0;
+..\SYSTEM\system_control\system_control.c(3938): warning:  #177-D: variable "Vbuffer" was declared but never referenced
+        uint8  Vbuffer = 0;
+..\SYSTEM\system_control\system_control.c(4369): warning:  #550-D: variable "Allneed_Power" was set but never used
+        static uint16 Allneed_Power = 0;  //总需求功率
+..\SYSTEM\system_control\system_control.c(4371): warning:  #177-D: variable "Need_Buffer" was declared but never referenced
+        uint8 Need_Buffer = 0;
+..\SYSTEM\system_control\system_control.c(4376): warning:  #550-D: variable "AliveOK" was set but never used
+        uint8 AliveOK[13] = {0};    //对在线设备的地址进行统计,1---10
+..\SYSTEM\system_control\system_control.c(4377): warning:  #550-D: variable "WorkOk_Address" was set but never used
+  static uint8 WorkOk_Address[13] = {0}; //对在运行的设备地址统计
+..\SYSTEM\system_control\system_control.c(4378): warning:  #550-D: variable "IndexAdd" was set but never used
+                uint8 IndexAdd = 0;  //辅助变量
+..\SYSTEM\system_control\system_control.c(4402): warning:  #550-D: variable "ONTime_Flag" was set but never used
+        static uint8  ONTime_Flag = 0;   //到点标志
+..\SYSTEM\system_control\system_control.c(4408): warning:  #177-D: variable "Min_Power" was declared but never referenced
+        uint8 Min_Power = 30;  //最小功率是30%
+..\SYSTEM\system_control\system_control.c(4409): warning:  #177-D: variable "Value_Buffer" was declared but never referenced
+        uint16 Value_Buffer = 0;  //辅助变量
+..\SYSTEM\system_control\system_control.c: 25 warnings, 0 errors
+compiling core_cm3.c...
+compiling timer.c...
+compiling usart2.c...
+..\HARDWARE\USART2\usart2.c(320): warning:  #111-D: statement is unreachable
+                                                                                                break;
+..\HARDWARE\USART2\usart2.c: 1 warning, 0 errors
+compiling usart3.c...
+..\HARDWARE\USART3\usart3.c(216): warning:  #550-D: variable "command" was set but never used
+                uint8 command = 0;
+..\HARDWARE\USART3\usart3.c(217): warning:  #550-D: variable "Length" was set but never used
+                uint8 Length = 0;
+..\HARDWARE\USART3\usart3.c(218): warning:  #177-D: variable "Value_Buffer" was declared but never referenced
+                uint16 Value_Buffer = 0;
+..\HARDWARE\USART3\usart3.c: 3 warnings, 0 errors
+compiling bsp_led.c...
+..\HARDWARE\led\bsp_led.c(366): warning:  #550-D: variable "Alarm_Value" was set but never used
+        uint16 Alarm_Value = 0;
+..\HARDWARE\led\bsp_led.c: 1 warning, 0 errors
+compiling BSP_RELAYS.c...
+compiling bsp_adc.c...
+..\HARDWARE\ADC\bsp_adc.c(557): warning:  #177-D: variable "Buffer16" was declared but never referenced
+                uint16  Buffer16 = 0;
+..\HARDWARE\ADC\bsp_adc.c: 1 warning, 0 errors
+compiling usart4.c...
+..\HARDWARE\USART4\usart4.c(215): warning:  #177-D: variable "index" was declared but never referenced
+        uint8 index = 0;
+..\HARDWARE\USART4\usart4.c(217): warning:  #550-D: variable "Value" was set but never used
+        uint16 Value = 0;
+..\HARDWARE\USART4\usart4.c(219): warning:  #177-D: variable "Data" was declared but never referenced
+        uint16 Data = 0; 
+..\HARDWARE\USART4\usart4.c(221): warning:  #177-D: variable "value_buffer" was declared but never referenced
+        float  value_buffer = 0;
+..\HARDWARE\USART4\usart4.c(224): warning:  #177-D: variable "Data2" was declared but never referenced
+        uint16 Data2 = 0;
+..\HARDWARE\USART4\usart4.c(225): warning:  #177-D: variable "Data3" was declared but never referenced
+        uint16 Data3 = 0;
+..\HARDWARE\USART4\usart4.c(880): warning:  #177-D: variable "Buffer_Data" was declared but never referenced
+                uint16 Buffer_Data = 0;
+..\HARDWARE\USART4\usart4.c(1083): warning:  #177-D: variable "Write_Index" was declared but never referenced
+                static uint8 Write_Index = 0; //用于切换不同的命令
+..\HARDWARE\USART4\usart4.c: 8 warnings, 0 errors
+compiling usr_c210.c...
+..\HARDWARE\USR_C210\usr_c210.c(52): warning:  #177-D: variable "checksum" was declared but never referenced
+        uint16 checksum = 0;
+..\HARDWARE\USR_C210\usr_c210.c: 1 warning, 0 errors
+compiling bsp_parallel_serial.c...
+compiling bsp_calendar.c...
+compiling bsp_rtc.c...
+compiling Internal_flash.c...
+..\SYSTEM\in_flash\Internal_flash.c(9): warning:  #550-D: variable "test_buffer" was set but never used
+        uint16 test_buffer = 0;
+..\SYSTEM\in_flash\Internal_flash.c: 1 warning, 0 errors
+compiling pwm_output.c...
+compiling activate_key.c...
+compiling usart5.c...
+compiling bsp_spi_flash.c...
+linking...
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.Union_ModBus2_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.D50L_SoloPressure_Union_MuxJiZu_Control_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Solo_Pid_Cal_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.TIM4_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Union_Check_Config_Data_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.LCD4013_MmodBus2_Communicastion).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.UART4_Server_Cmd_Analyse).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Sys_Ignition_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_parallel_serial.o(i.read_serial_data).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.Union_New_Server_Cmd_Analyse).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Abnormal_Events_Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.Modbus4_UnionRx_DataProcess).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches internal_flash.o(i.Write_Admin_Flash).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches main.o(i.main).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart3.o(i.ModBus_Uart3_LocalRX_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.sys_control_config_function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.SpiReadData).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.ModBus4RTU_Write0x10Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.ADC_Process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.XiangBian_Steam_AddFunction).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Auto_Pai_Wu_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.LCD4013_Data_Check_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.Adc_to_temperature).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Get_IO_Inf).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.Union_Modbus4_UnionTx_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.System_All_Control).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.EXTI15_10_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Water_Balance_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_dma.o(i.DMA_DeInit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_00_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Auto_Check_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.ModBus_Uart4_Local_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_100_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_110_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_120_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_130_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_140_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_150_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_160_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_170_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_180_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_190_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_200_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_30_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_40_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_50_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_60_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_70_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_80_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_90_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.Union_ModBus_Uart4_Local_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_20_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.UART4_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.USART1_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.USART2_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.USART3_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.LED_GPIO_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.go_10_process).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.UART5_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Sys_Launch_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Relays_NoInterrupt_ON_OFF).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.ADCx_Mode_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches internal_flash.o(i.Write_Second_Flash).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.ModBus_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Abnormal_Check_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.JiZu_ReadAndWrite_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_GetClocksFreq).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.System_Pressure_Balance_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_stm32f10x.o(i.SetSysClockTo72).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.IDLE_Err_Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_gpio.o(i.GPIO_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.sys_start_cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart3.o(i.Modbus3_UnionTx_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_ReadOutProtection).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.Pressure_Filter_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.IO_Interrupt_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.ModBus2LCD4013_Lcd7013_Communication).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart3.o(i.uart3_init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.uart4_init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.WenDu_Filter_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.uart_init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Err_Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.uart2_init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Before_Ignition_Prepare).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_TimeBaseInit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.A1B1_Jizu_ReadResponse).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.GetVolt).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_RegularChannelConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Power_ON_Begin_Check_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_exti.o(i.EXTI_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_DeInit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.SPI_Config_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_gpio.o(i.GPIO_PinRemapConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.sys_close_cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.Jizu_ReadResponse).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.SPI_RW_Data_MODE0).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_ProgramWord).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.SPI_Send_Data).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches pwm_output.o(i.TIM3_Mode_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.clear_struct_memory).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.SPI_Receiver_Data).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.RELAYS_GPIO_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches internal_flash.o(i.Write_Internal_Flash).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Alarm_Out_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_OC4Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usr_c210.o(i.ModuBusRTU_Write0x10Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Fan_Speed_Check_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches misc.o(i.NVIC_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches activate_key.o(i.Write_CPU_ID_Encrypt).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.TIM2_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_stm32f10x.o(i.SystemInit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.u1_printf).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches timer.o(i.TIM4_Int_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_HSEConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_rccclkconfig.o(i.HSE_SetSysClk).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_ErasePage).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.ModBus4_RTU_Read03).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart4.o(i.ModuBus4_Write0x10Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.ModuBus1RTU_WriteResponse).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.pressure_to_temperature).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches timer.o(i.TIM2_Int_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.One_Sec_Check).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_systick.o(i.SysTick_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_DeInit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Idel_Check_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_GetITStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.ModuBus2LCD4013_Write0x10Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart2.o(i.ModuBus2LCD_Write0x10Response).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.EXTI9_5_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.Pressure25KG_GetVolt).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.filter).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_GetFlagStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_ITConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Close_All_Realys_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_gpio.o(i.GPIO_EXTILineConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.ADCx_GPIO_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.EXTI0_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.ModBusCRC16).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_GetBank1Status).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220WriteRegister).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_dma.o(i.DMA_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_systick.o(i.SysTick_Delay_ms).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.JiaYao_Supply_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches pwm_output.o(i.PWM_Adjust).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.SpiCsStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220CsStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220ReadData).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches pwm_output.o(i.TIM3_GPIO_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.SPI_delay_us).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Dian_Huo_Air_Level).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_exti.o(i.EXTI_GetITStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rtc.o(i.RTC_GetITStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches activate_key.o(i.Write_CPUID_Flash).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_WaitForLastOperation).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches delay.o(i.delay_sys_sec).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.GetOut_Mannual_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Ignition_Check_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Last_Blow_Start_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_PLLConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_iwdg.o(i.IWDG_Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.RTC_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.TIM5_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.fputc).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_systick.o(i.SysTick_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.System_Idel_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_GetITStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.Usart_SendStr_length).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Send_Air_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i.Usart_SendByte).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_ClearITPendingBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_Unlock).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.Send_Adc_Lcd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.Delay_us).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Last_Blow_End_Fun).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.JTAG_Diable).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_PCLK2Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_GetFlagStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_GetReadOutProtectionStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_Lock).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_pwr.o(i.PWR_GetFlagStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_OC4PreloadConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Feed_Main_Pump_OFF).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches activate_key.o(i.Flash_Read_Protect).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_ADCCLKConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_HCLKConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_PCLK1Config).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_SYSCLKConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_Cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_dma.o(i.DMA_Cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_SetLatency).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rtc.o(i.RTC_ClearITPendingBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_ARRPreloadConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_Cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.BEEP_TIME).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_led.o(i.PortPin_Scan).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_Cmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_DMACmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rtc.o(i.RTC_WaitForLastTask).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.ZongKong_YanFa_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.ZongKong_YanFa_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches misc.o(i.NVIC_PriorityGroupConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_GetCalibrationStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_GetResetCalibrationStatus).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.EXTI4_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.PVD_IRQHandler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_gpio.o(i.GPIO_ReadInputDataBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_ClearFlag).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_ITConfig).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_GetSYSCLKSource).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_iwdg.o(i.IWDG_Enable).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_iwdg.o(i.IWDG_ReloadCounter).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Feed_Main_Pump_ON).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.LianXu_Paiwu_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Second_Water_Valve_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Solo_Work_ZhiShiDeng_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Solo_Work_ZhiShiDeng_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.get_dot).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Dian_Huo_OFF).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Dian_Huo_Start).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.LianXu_Paiwu_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Pai_Wu_Door_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Pai_Wu_Door_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Second_Water_Valve_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Send_Air_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Send_Gas_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.Send_Gas_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.WTS_Gas_One_Close).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_relays.o(i.WTS_Gas_One_Open).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches sys.o(i.NVIC_Configuration).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_exti.o(i.EXTI_ClearITPendingBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_flash.o(i.FLASH_ClearFlag).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_iwdg.o(i.IWDG_SetPrescaler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_iwdg.o(i.IWDG_SetReload).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_iwdg.o(i.IWDG_WriteAccessCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_adc.o(i.ADCx_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches pwm_output.o(i.TIM3_PWM_Init).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220SendByte).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_gpio.o(i.GPIO_WriteBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_rcc.o(i.RCC_PLLCmd).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_ReceiveData).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_ResetCalibration).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_adc.o(i.ADC_StartCalibration).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_stm32f10x.o(i.SetSysClock).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches system_control.o(i.Self_Check_Function).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_usart.o(i.USART_SendData).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches bsp_iwdg.o(i.IWDG_Feed).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches ads1220.o(i.ADS1220ReceiveByte).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_tim.o(i.TIM_ClearITPendingBit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.BusFault_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.HardFault_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.MemManage_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.UsageFault_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches usart.o(i._sys_exit).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.DebugMon_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.NMI_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.PendSV_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.SVC_Handler).
+..\OBJ\UART.axf: Error: L6405E: No .ANY selector matches stm32f10x_it.o(i.SysTick_Handler).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 270 error messages.
+"..\OBJ\UART.axf" - 270 Error(s), 57 Warning(s).
+Target not created.

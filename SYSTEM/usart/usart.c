@@ -6,42 +6,62 @@
 
 
 
-#if 1
-#pragma import(__use_no_semihosting)             
-////标准库需要的支持函数                 
-struct __FILE 
-{ 
-	int handle; 
-
-}; 
-
-
+#if defined(__CC_ARM) || defined(__ARMCC_VERSION)
+/* Keil ARMCC: disable semihosting */
+#pragma import(__use_no_semihosting)
+struct __FILE { int handle; };
 FILE __stdout;
-// FILE __stdin;
-// FILE __stderr;       
-//定义_sys_exit()以避免使用半主机模式    
-_sys_exit(int x) 
-{ 
-	x = x; 
-} 
+void _sys_exit(int x) { (void)x; while(1); }
 
-//_ttywrch(int ch)
-//{
-//	ch =ch;
-//}
-
-//重定义fputc函数 
 int fputc(int ch, FILE *f)
-{      
-	while((USART1->SR&0X40)==0);//循环发送,直到发送完毕   
-    USART1->DR = (u8) ch;      
+{
+	(void)f;
+	while((USART1->SR&0X40)==0);
+	USART1->DR = (u8) ch;
 	return ch;
 }
 
+#elif defined(__GNUC__)
+#include <sys/stat.h>
+#include <errno.h>
 
+int _write(int file, char *ptr, int len)
+{
+	int i;
+	(void)file;
+	for(i = 0; i < len; i++) {
+		while((USART1->SR & 0X40) == 0);
+		USART1->DR = (u8)ptr[i];
+	}
+	return len;
+}
 
+int _read(int file, char *ptr, int len)  { (void)file; (void)ptr; (void)len; return 0; }
+int _close(int file)                     { (void)file; return -1; }
+int _lseek(int file, int ptr, int dir)   { (void)file; (void)ptr; (void)dir; return 0; }
+int _fstat(int file, struct stat *st)    { (void)file; st->st_mode = S_IFCHR; return 0; }
+int _isatty(int file)                    { (void)file; return 1; }
 
-#endif 
+extern char _ebss;
+void *_sbrk(int incr)
+{
+	static char *heap_end = 0;
+	char *prev_heap_end;
+	if (heap_end == 0) heap_end = &_ebss;
+	prev_heap_end = heap_end;
+	heap_end += incr;
+	return (void *)prev_heap_end;
+}
+
+int fputc(int ch, FILE *f)
+{
+	(void)f;
+	while((USART1->SR&0X40)==0);
+	USART1->DR = (u8) ch;
+	return ch;
+}
+
+#endif
 
 
  

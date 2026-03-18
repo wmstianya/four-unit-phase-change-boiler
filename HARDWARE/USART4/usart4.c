@@ -261,8 +261,8 @@ void UART4_Server_Cmd_Analyse(void)
 											U4_Inf.TX_Data[5] = Temperature_Data.Pressure_Value >> 8 ;
 											U4_Inf.TX_Data[6] = Temperature_Data.Pressure_Value & 0X00FF;//2 各模块不具备压力变送器
 											
-											U4_Inf.TX_Data[7] = sys_flag.LPWater_Value;  //当前低压侧的液位高度
-											U4_Inf.TX_Data[8] = sys_flag.HPWater_Value;//3当前高压侧液位高度
+											U4_Inf.TX_Data[7] = sys_flag.LPWater_Value & 0xFF;
+											U4_Inf.TX_Data[8] = sys_flag.HPWater_Value & 0xFF;
 
 											U4_Inf.TX_Data[9] = 0x00;
 											U4_Inf.TX_Data[10] = LCD10D.DLCD.Water_State;//4当前低压侧水位的状态 
@@ -305,8 +305,8 @@ void UART4_Server_Cmd_Analyse(void)
 											U4_Inf.TX_Data[32] = Switch_Inf.LianXu_PaiWu_flag;//15连续排污阀状态
 											
 											
-											U4_Inf.TX_Data[33] = 0;
-											U4_Inf.TX_Data[34] = 0;//16  未使用
+											U4_Inf.TX_Data[33] = sys_flag.LPWater_Value >> 8;
+											U4_Inf.TX_Data[34] = sys_flag.HPWater_Value >> 8;
 											
 											U4_Inf.TX_Data[35] = 0;
 											U4_Inf.TX_Data[36] = sys_flag.Paiwu_Flag; //17  自动排污已经开启标志， 
@@ -917,8 +917,8 @@ uint8 Modbus4_UnionRx_DataProcess(uint8 Cmd,uint8 address)
 					
 					Buffer_Float = U4_Inf.RX_Data[5] *255 + U4_Inf.RX_Data[6];
 				 
-					 LCD10X1.LP_WaterValue[address] = U4_Inf.RX_Data[7]; //最大255cm
-					  LCD10X1.HP_WaterValue[address] = U4_Inf.RX_Data[8]; //最大255cm
+					 LCD10X1.LP_WaterValue[address] = ((uint16)U4_Inf.RX_Data[33] << 8) | U4_Inf.RX_Data[7];
+					 LCD10X1.HP_WaterValue[address] = ((uint16)U4_Inf.RX_Data[34] << 8) | U4_Inf.RX_Data[8];
 					 
 				 
 					
@@ -958,6 +958,8 @@ uint8 Modbus4_UnionRx_DataProcess(uint8 Cmd,uint8 address)
 					JiZu[address].Slave_D.Power = U4_Inf.RX_Data[24] ;//9风机功率
 
 					JiZu[address].Slave_D.Pump_State = U4_Inf.RX_Data[28] ;
+
+					SlaveG[address].LianxuFa_Data = U4_Inf.RX_Data[32];
 
 					if(SlaveG[address].Paiwu_Flag)
 						{
